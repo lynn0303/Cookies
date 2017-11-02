@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+
+  <body>
+    <h1>Cookies</h1>
+
+
+    <div id="chocolate-cookie">1+ CHOCOLATE PLEASE</div>
+    <br>
+
+    <div id="strawberry-cookie">1+ STRAWBERRY PLEASE</div>
+    <br>
+
+    <div id="rasin-cookie">1+ RASIN COOKIE</div>
+
+
+    <script src="cookies.min.js"></script>
+    <script>
+
+
+      function updateCholateCookie() {
+
+
+      var cookieCount = Cookies.get("chocolateCookie");
+      if (cookieCount === undefined) {
+        Cookies.set("chocolateCookie", 1);
+      } else {
+        cookieCount = parseInt(cookieCount);
+        Cookies.set("chocolateCookie", cookieCount +1);
+        }
+      }
+
+
+      function updateStrawberryCookie() {
+
+      var cookieCount = Cookies.get("strawberryCookie");
+      if (cookieCount === undefined) {
+        Cookies.set("strawberryCookie", 1);
+      } else {
+        cookieCount = parseInt(cookieCount);
+        Cookies.set("strawberryCookie", cookieCount +1);
+        }
+      }
+
+
+      function updateRasinCookie() {
+
+      var cookieCount = Cookies.get("rasinCookie");
+      if (cookieCount === undefined) {
+        Cookies.set("rasinCookie", 1);
+      } else {
+        cookieCount = parseInt(cookieCount);
+        Cookies.set("rasinCookie", cookieCount +1);
+        }
+      }
+
+      document.getElementById("chocolate-cookie").addEventListener("click", updateCholateCookie);
+      document.getElementById("strawberry-cookie").addEventListener("click", updateStrawberryCookie);
+      document.getElementById("rasin-cookie").addEventListener("click", updateRasinCookie);
+
+
+    </script>
+  </body>
+</html>
